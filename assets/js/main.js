@@ -17,39 +17,39 @@ BONUS 2: Organizzare i singoli membri in card/schede
 //MILESTONE 0: Creare l’array di oggetti con le informazioni fornite
 const membersTeam = [
     {
-        Name: 'Wayne Barnett',
-        Role: 'Founder & CEO',
-        Image: './assets/img/wayne-barnett-founder-ceo.jpg',
+        name: 'Wayne Barnett',
+        role: 'Founder & CEO',
+        image: './assets/img/wayne-barnett-founder-ceo.jpg',
     },
 
     {
-        Name: 'Angela Caroll',
-        Role: 'Chief Editor',
-        Image: './assets/img/angela-caroll-chief-editor.jpg',
+        name: 'Angela Caroll',
+        role: 'Chief Editor',
+        image: './assets/img/angela-caroll-chief-editor.jpg',
     },
 
     {
-        Name: 'Waleter gordon',
-        Role: 'Social Media Manager',
-        Image: './assets/img/walter-gordon-office-manager.jpg',
+        name: 'Waleter gordon',
+        role: 'Social Media Manager',
+        image: './assets/img/walter-gordon-office-manager.jpg',
     },
 
     {
-        Name: 'Angela Barnett',
-        Role: 'Chief Editor',
-        Image: './assets/img/wayne-barnett-founder-ceo.jpg',
+        name: 'Angela Barnett',
+        role: 'Chief Editor',
+        image: './assets/img/wayne-barnett-founder-ceo.jpg',
     },
 
     {
-        Name: 'Scott Estrada',
-        Role: 'Developer',
-        Image: './assets/img/scott-estrada-founder-ceo.jpg',
+        name: 'Scott Estrada',
+        role: 'Developer',
+        image: './assets/img/scott-estrada-founder-ceo.jpg',
     },
 
     {
-        Name: 'Barbara Ramos',
-        Role: 'Grafic designer',
-        Image: './assets/img/barbara-ramos-graphic-designer.jpg',
+        name: 'Barbara Ramos',
+        role: 'Grafic designer',
+        image: './assets/img/barbara-ramos-graphic-designer.jpg',
     }
 ]
 
@@ -71,15 +71,16 @@ console.log(listTeam);
 console.log('PROVA CON CICLO FOR');
 for (let i = 0; i < membersTeam.length; i++) {
     const memberTeam = membersTeam[i];
-    console.log(memberTeam.Name);
-    console.log(memberTeam.Role);
-    console.log(memberTeam.Image);
+    console.log(memberTeam.name);
+    console.log(memberTeam.role);
+    console.log(memberTeam.image);
 
+    // MILESTONE 2: Stampare le stesse informazioni su DOM sottoforma di stringhe
     const listMembersDom = `
     <div>
-        <h4>${memberTeam.Name}</h4>
-        <h6>${memberTeam.Role}</h6>
-        <p>${memberTeam.Image}</p>
+        <h4>${memberTeam.name}</h4>
+        <h6>${memberTeam.role}</h6>
+        <p>${memberTeam.image}</p>
     </div>`;
     //console.log(listMembersDom);
 
@@ -87,16 +88,15 @@ for (let i = 0; i < membersTeam.length; i++) {
 }
 
 
-// MILESTONE 2: Stampare le stesse informazioni su DOM sottoforma di stringhe
 // creare nel dom elemento in cui stampare - ok 
 // collegare in js l'elemento del dom
 // stampare nel dom le stringe con i membri del team - ipotesi template literal e poi un tipo di insert.
 // template literal ...
 /* const listMembersDom = `
 <div>
-    <h2>${memberTeam.Name}</h2>
-    <h4>${memberTeam.Role}</h4>
-    <p>${memberTeam.Image}</p>
+    <h2>${memberTeam.name}</h2>
+    <h4>${memberTeam.role}</h4>
+    <p>${memberTeam.image}</p>
 </div>` */
 
 
