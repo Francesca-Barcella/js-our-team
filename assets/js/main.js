@@ -55,6 +55,21 @@ const membersTeam = [
 
 console.log(membersTeam);
 
+// MILESTONE 1: Stampare su console le informazioni di nome, ruolo e la stringa della foto
+// ciclo (provare entrambi for - for in) per ciclare la lunghezza dell'array
+// consolelog per stampare in console
+console.log('PROVA CON CICLO FOR IN');
+for (const key in membersTeam) {
+    console.log(key, membersTeam[key]);     
+}
 
+console.log('');
 
+console.log('PROVA CON CICLO FOR');
+for (let i = 0; i < membersTeam.length; i++) {
+    const memberTeam = membersTeam[i];
+    console.log(memberTeam.Name);
+    console.log(memberTeam.Role);
+    console.log(memberTeam.Image);
+}
 
