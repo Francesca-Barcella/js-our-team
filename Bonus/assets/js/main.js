@@ -10,37 +10,37 @@ const membersTeam = [
     {
         name: 'Wayne Barnett',
         role: 'Founder & CEO',
-        image: './assets/img/wayne-barnett-founder-ceo.jpg',
+        image: 'wayne-barnett-founder-ceo.jpg',
     },
 
     {
         name: 'Angela Caroll',
         role: 'Chief Editor',
-        image: './assets/img/angela-caroll-chief-editor.jpg',
+        image: 'angela-caroll-chief-editor.jpg',
     },
 
     {
         name: 'Waleter Gordon',
         role: 'Social Media Manager',
-        image: './assets/img/walter-gordon-office-manager.jpg',
+        image: 'walter-gordon-office-manager.jpg',
     },
 
     {
         name: 'Angela Barnett',
         role: 'Chief Editor',
-        image: './assets/img/wayne-barnett-founder-ceo.jpg',
+        image: 'wayne-barnett-founder-ceo.jpg',
     },
 
     {
         name: 'Scott Estrada',
         role: 'Developer',
-        image: './assets/img/scott-estrada-developer.jpg',
+        image: 'scott-estrada-developer.jpg',
     },
 
     {
         name: 'Barbara Ramos',
         role: 'Grafic designer',
-        image: './assets/img/barbara-ramos-graphic-designer.jpg',
+        image: 'barbara-ramos-graphic-designer.jpg',
     }
 ]
 
@@ -76,12 +76,16 @@ console.log(listTeam);
     listTeam.insertAdjacentHTML('beforeend', listMembersDom);
 } */
 
-for (let i = 0; i < membersTeam.length; i++) {
-    const memberTeam = membersTeam[i];
+const srcStart = './assets/img/';
 
-     const cardMembersDom = `
+for (let i = 0; i < membersTeam.length; i++) {
+
+    const memberTeam = membersTeam[i];
+    const imgSrc = imageSrc(srcStart, memberTeam.image);
+    
+    const cardMembersDom = `
      <div class="card">
-        <img src="${memberTeam.image}"/>
+        <img src="${imgSrc}"/>
         <h4>${memberTeam.name}</h4>
         <h6>${memberTeam.role}</h6>
     </div>`;
@@ -92,18 +96,12 @@ for (let i = 0; i < membersTeam.length; i++) {
 }
 
 
-//TENTATIVO IMAGE
+//FUNCTION IMAGE
 
-const srcStart = './assets/img/';
-const srcEnd = 'wayne-barnett-founder-ceo.jpg';
-
-function imageSrc (url_1, url_2){
+function imageSrc(url_1, url_2){
     const totalSrc = (url_1 + url_2);
-    return totalSrc
+    return totalSrc;
 }
-
-const imgSrc = imageSrc (srcStart, srcEnd);
-console.log(imgSrc);
 
 
 
