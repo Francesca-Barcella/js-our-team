@@ -87,16 +87,23 @@ for (let i = 0; i < membersTeam.length; i++) {
     </div>`;
     console.log(cardMembersDom);
  
-
     listTeam.insertAdjacentHTML('beforeend', cardMembersDom);
+
 }
 
 
 //TENTATIVO IMAGE
-let src = document.querySelector('.avatar');
-let img = document.createElement("img");
-img.src = "./assets/img/barbara-ramos-graphic-designer.jpg";
-src.append(img);
+
+const srcStart = './assets/img/';
+const srcEnd = 'wayne-barnett-founder-ceo.jpg';
+
+function imageSrc (url_1, url_2){
+    const totalSrc = (url_1 + url_2);
+    return totalSrc
+}
+
+const imgSrc = imageSrc (srcStart, srcEnd);
+console.log(imgSrc);
 
 
 
