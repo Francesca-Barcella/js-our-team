@@ -73,3 +73,11 @@ for (let i = 0; i < membersTeam.length; i++) {
     console.log(memberTeam.Image);
 }
 
+
+// MILESTONE 2: Stampare le stesse informazioni su DOM sottoforma di stringhe
+// creare nel dom elemento in cui stampare - ok 
+// collegare in js l'elemento del dom
+const listTeam = document.querySelector('.container');
+// stampare nel dom le stringe con i membri del team - ipotesi template literal e poi un tipo di insert.
+
+
