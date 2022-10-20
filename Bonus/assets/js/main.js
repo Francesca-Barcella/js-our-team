@@ -20,7 +20,7 @@ const membersTeam = [
     },
 
     {
-        name: 'Waleter gordon',
+        name: 'Waleter Gordon',
         role: 'Social Media Manager',
         image: './assets/img/walter-gordon-office-manager.jpg',
     },
@@ -34,7 +34,7 @@ const membersTeam = [
     {
         name: 'Scott Estrada',
         role: 'Developer',
-        image: './assets/img/scott-estrada-founder-ceo.jpg',
+        image: './assets/img/scott-estrada-developer.jpg',
     },
 
     {
@@ -81,7 +81,7 @@ for (let i = 0; i < membersTeam.length; i++) {
 
      const cardMembersDom = `
      <div class="card">
-        <img src=${memberTeam.image}/>
+        <img src="${memberTeam.image}"/>
         <h4>${memberTeam.name}</h4>
         <h6>${memberTeam.role}</h6>
     </div>`;
