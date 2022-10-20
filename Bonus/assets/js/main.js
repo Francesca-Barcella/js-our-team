@@ -1,18 +1,9 @@
-//alert('ciao, funziono!')
-
 /******************************************************************************** 
-TRACCIA 
-Utilizzando i dati forniti, creare un array di oggetti per rappresentare i membri del team.
-Ogni membro è caratterizzato dalle seguenti informazioni: nome, ruolo e foto.
-MILESTONE 0: Creare l’array di oggetti con le informazioni fornite
-MILESTONE 1: Stampare su console le informazioni di nome, ruolo e la stringa della foto
-MILESTONE 2: Stampare le stesse informazioni su DOM sottoforma di stringhe
 BONUS 1: Trasformare la stringa foto in una immagine effettiva
 BONUS 2: Organizzare i singoli membri in card/schede
 ********************************************************************************/
 
-// Utilizzando i dati forniti, creare un array di oggetti per rappresentare i membri del team.
-// proprietà da inserire: nome, ruolo, foto.
+
 
 //MILESTONE 0: Creare l’array di oggetti con le informazioni fornite
 const membersTeam = [
@@ -56,27 +47,25 @@ const membersTeam = [
 console.log(membersTeam);
 
 // MILESTONE 1: Stampare su console le informazioni di nome, ruolo e la stringa della foto
-// ciclo (provare entrambi for - for in) per ciclare la lunghezza dell'array
-// consolelog per stampare in console
-console.log('PROVA CON CICLO FOR IN');
+/* console.log('PROVA CON CICLO FOR IN');
 for (const key in membersTeam) {
     console.log(key, membersTeam[key]);
 }
 
-console.log('');
+console.log(''); */
 
 const listTeam = document.querySelector('.container');
 console.log(listTeam);
 
-console.log('PROVA CON CICLO FOR');
-for (let i = 0; i < membersTeam.length; i++) {
+//console.log('PROVA CON CICLO FOR');
+/*for (let i = 0; i < membersTeam.length; i++) {
     const memberTeam = membersTeam[i];
-    console.log(memberTeam.name);
-    console.log(memberTeam.role);
-    console.log(memberTeam.image);
+    //console.log(memberTeam.name);
+    //console.log(memberTeam.role);
+    //console.log(memberTeam.image);
 
     // MILESTONE 2: Stampare le stesse informazioni su DOM sottoforma di stringhe
-    const listMembersDom = `
+     const listMembersDom = `
     <div>
         <h4>${memberTeam.name}</h4>
         <h6>${memberTeam.role}</h6>
@@ -85,18 +74,21 @@ for (let i = 0; i < membersTeam.length; i++) {
     //console.log(listMembersDom);
 
     listTeam.insertAdjacentHTML('beforeend', listMembersDom);
+} */
+
+for (let i = 0; i < membersTeam.length; i++) {
+    const memberTeam = membersTeam[i];
+
+     const cardMembersDom = `
+     <div class="card">
+     <p>${memberTeam.image}</p>
+        <h4>${memberTeam.name}</h4>
+        <h6>${memberTeam.role}</h6>
+    </div>`;
+ 
+
+    listTeam.insertAdjacentHTML('beforeend', cardMembersDom);
 }
 
-
-// creare nel dom elemento in cui stampare - ok 
-// collegare in js l'elemento del dom
-// stampare nel dom le stringe con i membri del team - ipotesi template literal e poi un tipo di insert.
-// template literal ...
-/* const listMembersDom = `
-<div>
-    <h2>${memberTeam.name}</h2>
-    <h4>${memberTeam.role}</h4>
-    <p>${memberTeam.image}</p>
-</div>` */
 
 
