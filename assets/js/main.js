@@ -60,10 +60,13 @@ console.log(membersTeam);
 // consolelog per stampare in console
 console.log('PROVA CON CICLO FOR IN');
 for (const key in membersTeam) {
-    console.log(key, membersTeam[key]);     
+    console.log(key, membersTeam[key]);
 }
 
 console.log('');
+
+const listTeam = document.querySelector('.container');
+console.log(listTeam);
 
 console.log('PROVA CON CICLO FOR');
 for (let i = 0; i < membersTeam.length; i++) {
@@ -71,13 +74,29 @@ for (let i = 0; i < membersTeam.length; i++) {
     console.log(memberTeam.Name);
     console.log(memberTeam.Role);
     console.log(memberTeam.Image);
+
+    const listMembersDom = `
+    <div>
+        <h4>${memberTeam.Name}</h4>
+        <h6>${memberTeam.Role}</h6>
+        <p>${memberTeam.Image}</p>
+    </div>`;
+    //console.log(listMembersDom);
+
+    listTeam.insertAdjacentHTML('beforeend', listMembersDom);
 }
 
 
 // MILESTONE 2: Stampare le stesse informazioni su DOM sottoforma di stringhe
 // creare nel dom elemento in cui stampare - ok 
 // collegare in js l'elemento del dom
-const listTeam = document.querySelector('.container');
 // stampare nel dom le stringe con i membri del team - ipotesi template literal e poi un tipo di insert.
+// template literal ...
+/* const listMembersDom = `
+<div>
+    <h2>${memberTeam.Name}</h2>
+    <h4>${memberTeam.Role}</h4>
+    <p>${memberTeam.Image}</p>
+</div>` */
 
 
