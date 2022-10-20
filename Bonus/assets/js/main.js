@@ -81,14 +81,24 @@ for (let i = 0; i < membersTeam.length; i++) {
 
      const cardMembersDom = `
      <div class="card">
-     <p>${memberTeam.image}</p>
+        <img src=${memberTeam.image}/>
         <h4>${memberTeam.name}</h4>
         <h6>${memberTeam.role}</h6>
     </div>`;
+    console.log(cardMembersDom);
  
 
     listTeam.insertAdjacentHTML('beforeend', cardMembersDom);
 }
+
+
+//TENTATIVO IMAGE
+let src = document.querySelector('.avatar');
+let img = document.createElement("img");
+img.src = "./assets/img/barbara-ramos-graphic-designer.jpg";
+src.append(img);
+
+
 
 
 
