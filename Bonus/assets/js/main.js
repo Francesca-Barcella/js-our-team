@@ -28,7 +28,7 @@ const membersTeam = [
     {
         name: 'Angela Lopes',
         role: 'Social Media Manager',
-        image: 'angela-lopez-social-media-manager',
+        image: 'angela-lopez-social-media-manager.jpg',
     },
 
     {
@@ -54,7 +54,7 @@ for (const key in membersTeam) {
 
 console.log(''); */
 
-const listTeam = document.querySelector('.container');
+const listTeam = document.querySelector('.row');
 console.log(listTeam);
 
 //console.log('PROVA CON CICLO FOR');
@@ -82,15 +82,17 @@ for (let i = 0; i < membersTeam.length; i++) {
 
     const memberTeam = membersTeam[i];
     const imgSrc = imageSrc(srcStart, memberTeam.image);
-    
+
     const cardMembersDom = `
-     <div class="card">
-        <img src="${imgSrc}"/>
-        <h4>${memberTeam.name}</h4>
-        <h6>${memberTeam.role}</h6>
-    </div>`;
+        <div class="col">
+            <div class="card">
+            <img src="${imgSrc}"/>
+            <h4>${memberTeam.name}</h4>
+            <h6>${memberTeam.role}</h6>
+            </div>
+        </div>`;
     console.log(cardMembersDom);
- 
+
     listTeam.insertAdjacentHTML('beforeend', cardMembersDom);
 
 }
@@ -98,7 +100,7 @@ for (let i = 0; i < membersTeam.length; i++) {
 
 //FUNCTION IMAGE
 
-function imageSrc(url_1, url_2){
+function imageSrc(url_1, url_2) {
     const totalSrc = (url_1 + url_2);
     return totalSrc;
 }
