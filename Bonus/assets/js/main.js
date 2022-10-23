@@ -21,14 +21,14 @@ const membersTeam = [
 
     {
         name: 'Waleter Gordon',
-        role: 'Social Media Manager',
+        role: 'Office Manager',
         image: 'walter-gordon-office-manager.jpg',
     },
 
     {
-        name: 'Angela Barnett',
-        role: 'Chief Editor',
-        image: 'wayne-barnett-founder-ceo.jpg',
+        name: 'Angela Lopes',
+        role: 'Social Media Manager',
+        image: 'angela-lopez-social-media-manager',
     },
 
     {
